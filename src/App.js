@@ -858,7 +858,8 @@ class App extends React.Component {
   getPage = () => {
     let { payments, page } = this.state
     let pages = []
-    for (let i = page * 6; i < (page + 5); i++) {
+    let newPage = page * 6
+    for (let i = newPage; i < (newPage + 5); i++) {
       if (payments[i]) {
         let payment = payments[i].payment
         let user = payment.actor
