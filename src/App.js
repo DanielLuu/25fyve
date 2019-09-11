@@ -994,7 +994,7 @@ class App extends React.Component {
               <div className='goal'>
                 <div className='progress-bar'>
                   <div className='progress-bar-inner' style={{
-                    height: total / totalPrice * 100 + '%'
+                    height: (total >= totalPrice ? totalPrice : total) / totalPrice * 100 + '%'
                   }}></div>
                 </div>
                 <div className='marks'>
