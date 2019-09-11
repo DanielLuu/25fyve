@@ -799,6 +799,7 @@ class App extends React.Component {
     payments: [],
     page: 0,
     countdown: {},
+    error: ''
   }
 
   componentWillMount = () => {
@@ -811,7 +812,7 @@ class App extends React.Component {
     fetch('/api/payments')
       .then(res => res.json()).then(res => {
         if (res.error)
-          return
+          return this.setState({ error: res.error })
         console.log(res)
         this.setState({
           payments: res.data.filter(p =>
@@ -875,7 +876,7 @@ class App extends React.Component {
   }
 
   render = () => {
-    let { countdown, payments, page } = this.state
+    let { countdown, payments, page, error } = this.state
     let {
       days,
       hours,
@@ -922,9 +923,10 @@ class App extends React.Component {
                   All the stuff on this page will definitely be there!<br />
                   But if you want to help cover cost you'd be a real one.
               </div>
-                <div className='payments-title'>{payments.length} Real Ones</div>
+                {error && <div className='payments-title'>{error}</div>}
+                {!error && <div className='payments-title'>{payments.length} Real Ones</div>}
                 {this.getPage()}
-                <div className='btn-bar'>
+                {!error && <div className='btn-bar'>
                   <button className='page-btn' disabled={page === 0} onClick={() => {
                     if (page > 0)
                       this.setState({ page: page - 1 })
@@ -933,7 +935,7 @@ class App extends React.Component {
                   <button className='page-btn' disabled={page > payments.length / 6} onClick={() => {
                     this.setState({ page: page + 1 })
                   }}>></button>
-                </div>
+                </div>}
               </div>
               <div className='goal'>
                 <div className='progress-bar'>

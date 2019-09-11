@@ -14,6 +14,8 @@ app.get('/api/payments', (req, res) => {
   let url = `https://api.venmo.com/v1/stories/target-or-actor/${process.env.VENMO_ID}?limit=50&access_token=${process.env.ACCESS_TOKEN}`
   agent.get(url).then(payments => {
     res.send(payments.body)
+  }).catch(() => {
+    res.send({ error: 'Technical difficulties while pulling payments.' })
   })
 })
 
