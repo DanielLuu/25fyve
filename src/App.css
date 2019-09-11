@@ -2,7 +2,8 @@
   text-align: center;
 }
 
-.header {
+.section {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -29,13 +30,6 @@
   font-weight: bold;
 }
 
-.payments-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
 .payments-center {
   display: flex;
   flex-direction: row;
@@ -53,6 +47,8 @@
   color: white;
   font-size: 18px;
   margin-bottom: 15px;
+  max-width: 450px;
+  word-wrap: break-word;
 }
 
 .payments-title {
@@ -154,4 +150,21 @@
 
 .btn-bar {
 
+}
+
+.bottles-des {
+  text-align: left;
+  padding: 20px;
+}
+
+.handle-title {
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.handle-subtitle {
+  color: white;
+  margin-bottom: 10px;
 }
