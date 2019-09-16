@@ -966,8 +966,8 @@ class App extends React.Component {
                 position: 'absolute',
                 width: 320,
                 textAlign: 'center',
-                bottom: 40,
-              }}>&#11015; help</div>
+                bottom: 100,
+              }}>↓ help</div>
             </div>
           </div>
           <div className='section'>
@@ -1000,8 +1000,8 @@ class App extends React.Component {
               position: 'absolute',
               width: 320,
               textAlign: 'center',
-              bottom: 40,
-            }}>&#11015; goals</div>
+              bottom: 20,
+            }}>↓ goals</div>
           </div>
           <div className='section'>
             <div className='goal'>
@@ -1023,8 +1023,8 @@ class App extends React.Component {
               position: 'absolute',
               width: 320,
               textAlign: 'center',
-              bottom: 40,
-            }}>&#11015; bottles</div>
+              bottom: 20,
+            }}>↓ bottles</div>
           </div>
           <div className='section'>
             <div style={{
@@ -1068,8 +1068,8 @@ class App extends React.Component {
               position: 'absolute',
               width: 320,
               textAlign: 'center',
-              bottom: 40,
-            }}>&#11015; details</div>
+              bottom: 20,
+            }}>↓ details</div>
           </div>
           <div className='section'>
             <div className='bottles-des' style={{
@@ -1110,8 +1110,8 @@ class App extends React.Component {
               position: 'absolute',
               width: 320,
               textAlign: 'center',
-              bottom: 40,
-            }}>&#11015; entertainment</div>
+              bottom: 20,
+            }}>↓ entertainment</div>
           </div>
           <div className='section'>
             <div style={{
