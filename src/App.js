@@ -966,7 +966,7 @@ class App extends React.Component {
                 position: 'absolute',
                 width: 320,
                 textAlign: 'center',
-                bottom: 20,
+                bottom: 40,
               }}>&#11015; help</div>
             </div>
           </div>
@@ -1000,7 +1000,7 @@ class App extends React.Component {
               position: 'absolute',
               width: 320,
               textAlign: 'center',
-              bottom: 20,
+              bottom: 40,
             }}>&#11015; goals</div>
           </div>
           <div className='section'>
@@ -1023,7 +1023,7 @@ class App extends React.Component {
               position: 'absolute',
               width: 320,
               textAlign: 'center',
-              bottom: 20,
+              bottom: 40,
             }}>&#11015; bottles</div>
           </div>
           <div className='section'>
@@ -1068,7 +1068,7 @@ class App extends React.Component {
               position: 'absolute',
               width: 320,
               textAlign: 'center',
-              bottom: 20,
+              bottom: 40,
             }}>&#11015; details</div>
           </div>
           <div className='section'>
@@ -1110,7 +1110,7 @@ class App extends React.Component {
               position: 'absolute',
               width: 320,
               textAlign: 'center',
-              bottom: 20,
+              bottom: 40,
             }}>&#11015; entertainment</div>
           </div>
           <div className='section'>
