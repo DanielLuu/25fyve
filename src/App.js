@@ -1034,7 +1034,7 @@ class App extends React.Component {
               <div className='bottles-des'>
                 <div className='goal-title'>Tables</div>
                 <div className='goal-subtitle'>
-                  There will be a limited amount of tables available. Buying a table is just paying for 4 handles! You'll get bottle service, bottle girls (or guys whatever you want), a sign with your name on it, a DJ shoutout, and your own sitting area. Please message me about table details.
+                  There will be a limited amount of tables available. Buying a table is just paying for 2 handles! You'll get bottle service, bottle girls (or guys whatever you want), a sign with your name on it, a DJ shoutout, and your own sitting area. Please message me about table details.
                 </div>
                 <div className='handle-title'>Handle List</div>
                 <div className='goal-subtitle'>Handles will be the same price as they are at the liquor store. If you'd like to buy a bottle not on this list please message me.</div>
