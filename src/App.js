@@ -1077,7 +1077,8 @@ class App extends React.Component {
             }}>
               <div className='goal-title'>Details</div>
               <div className='goal-subtitle'>
-                December 7th, 2019 @ 10 PM to 2 AM
+                December 7th, 2019 @ 10 PM to 2 AM<br />
+                Dress Code: <b>ORANGE</b>
               </div>
               <div style={{
                 position: 'relative',
