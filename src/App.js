@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactPageScroller from "react-page-scroller"
+import nam from './nam.jpg'
 import './App.css'
 
 let fakeData = {
@@ -817,7 +818,7 @@ class App extends React.Component {
           return this.setState({ error: res.error })
         this.setState({
           payments: res.data.filter(p =>
-            p.payment && p.payment.target.user.username === 'squishguin'
+            p.payment && p.payment.target.user.username === 'squishguin' && p.payment.note.toLowerCase().indexOf('25yve') !== -1
           )
         })
       })
@@ -879,27 +880,27 @@ class App extends React.Component {
 
   getGoals = (total) => {
     let goals = []
-    let currTotal = 0
+    let currTotal = 300
     let marks = [
       {
         amount: 200,
         icon: 'https://static.thenounproject.com/png/86908-200.png',
-        title: 'Drink Piñata',
-      },
-      {
-        amount: 500,
-        icon: 'https://static.thenounproject.com/png/200156-200.png',
-        title: 'Liquor',
+        title: 'Pyñata',
       },
       {
         amount: 400,
-        icon: 'https://static.thenounproject.com/png/199374-200.png',
-        title: 'Gladiator Joust',
+        icon: 'https://static.thenounproject.com/png/1590652-200.png',
+        title: 'Fyte Night',
+      },
+      {
+        amount: 400,
+        icon: 'https://static.thenounproject.com/png/1092336-200.png',
+        title: 'Lyghts Sound',
       },
       {
         amount: 500,
-        icon: 'https://static.thenounproject.com/png/86187-200.png',
-        title: 'Hungry Hippos',
+        icon: 'https://static.thenounproject.com/png/1792741-200.png',
+        title: 'Lyquor',
       },
       {
         amount: 1300,
@@ -908,7 +909,6 @@ class App extends React.Component {
       },
     ]
     marks.forEach(goal => {
-      currTotal += goal.amount
       goals.push(<div className='goal-mark' style={{
         bottom: currTotal / totalPrice * 100 + '%'
       }}>
@@ -920,6 +920,7 @@ class App extends React.Component {
           }}>${goal.amount}</div>
         </div>
       </div>)
+      currTotal += 600
     })
     return goals
   }
@@ -975,8 +976,9 @@ class App extends React.Component {
                 <div style={{ color: 'white' }}>FUNDING</div>
                 <div className='goal-title'>Daniel's 25th Birthday</div>
                 <div className='goal-subtitle'>
-                  All the stuff on this page will definitely be there!<br />
-                  But if you want to help cover cost you'd be a real one.
+                  All the goals will definitely be there!<br />
+                  But if you want to help cover cost you'd be a real one.<br />
+                  Venmo <b>@squishguin</b> with the note "25YVE" to donate
               </div>
                 {error && <div className='payments-title'>{error}</div>}
                 {!error && <div className='payments-title'>{payments.length} Real Ones</div>}
@@ -992,19 +994,28 @@ class App extends React.Component {
                   }}>></button>
                 </div>}
               </div>
-              <div className='goal'>
-                <div className='progress-bar'>
-                  <div className='progress-bar-inner' style={{
-                    height: (total >= totalPrice ? totalPrice : total) / totalPrice * 100 + '%'
-                  }}></div>
+            </div>
+            <div style={{
+              color: 'white',
+              position: 'absolute',
+              width: 320,
+              textAlign: 'center',
+              bottom: 20,
+            }}>&#11015; goals</div>
+          </div>
+          <div className='section'>
+            <div className='goal'>
+              <div className='progress-bar'>
+                <div className='progress-bar-inner' style={{
+                  height: (total >= totalPrice ? totalPrice : total) / totalPrice * 100 + '%'
+                }}></div>
+              </div>
+              <div className='marks'>
+                <div style={{ textAlign: 'left' }}>
+                  <div style={{ color: 'white' }}>Total Raised</div>
+                  <div className='goal-total'>${total.toLocaleString()}</div>
                 </div>
-                <div className='marks'>
-                  <div style={{ textAlign: 'left' }}>
-                    <div style={{ color: 'white' }}>Total Raised</div>
-                    <div className='goal-total'>${total.toLocaleString()}</div>
-                  </div>
-                  {this.getGoals(total)}
-                </div>
+                {this.getGoals(total)}
               </div>
             </div>
             <div style={{
@@ -1023,12 +1034,10 @@ class App extends React.Component {
               <div className='bottles-des'>
                 <div className='goal-title'>Tables</div>
                 <div className='goal-subtitle'>
-                  There will be a limited amount of tables available. Buying a table is just paying for 2 handles! (It says bottles but this ain't the club so no reason to not get that value!) You'll get bottle service as well as your own couch area.
+                  There will be a limited amount of tables available. Buying a table is just paying for 4 handles! You'll get bottle service, bottle girls (or guys whatever you want), a sign with your name on it, a DJ shoutout, and your own sitting area. Please message me about table details.
                 </div>
-              </div>
-              <div className='bottles-des'>
                 <div className='handle-title'>Handle List</div>
-                <div className='handle-subtitle'>Handles will be the same price as they are at the liquor store.</div>
+                <div className='goal-subtitle'>Handles will be the same price as they are at the liquor store. If you'd like to buy a bottle not on this list please message me.</div>
                 <div>
                   <table>
                     <tbody>
@@ -1052,6 +1061,77 @@ class App extends React.Component {
                     </tbody>
                   </table>
                 </div>
+              </div>
+            </div>
+            <div style={{
+              color: 'white',
+              position: 'absolute',
+              width: 320,
+              textAlign: 'center',
+              bottom: 20,
+            }}>&#11015; details</div>
+          </div>
+          <div className='section'>
+            <div className='bottles-des' style={{
+              width: '100%',
+            }}>
+              <div className='goal-title'>Details</div>
+              <div className='goal-subtitle'>
+                December 7th, 2019 @ 10 PM to 2 AM
+              </div>
+              <div style={{
+                position: 'relative',
+                textAlign: 'right',
+                height: 500,
+                width: '100%',
+              }}>
+                <div style={{
+                  overflow: 'hidden',
+                  background: 'none!important',
+                  height: 500,
+                  width: '100%',
+                }}
+                >
+                  <iframe
+                    width="100%"
+                    height="500"
+                    id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=330%20Pennsylvania%20Ave%20SE%2C%20Washington%2C%20DC%2020003&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"></iframe>
+                  <a href="https://www.embedgooglemap.net/blog/best-wordpress-themes/"></a>
+                </div>
+              </div>
+            </div>
+            <div style={{
+              color: 'white',
+              position: 'absolute',
+              width: 320,
+              textAlign: 'center',
+              bottom: 20,
+            }}>&#11015; entertainment</div>
+          </div>
+          <div className='section'>
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              width: '100%',
+              alignItems: 'center',
+              maxWidth: 600,
+            }}>
+              <div className='goal-title' style={{
+                width: '100%',
+                textAlign: 'left',
+              }}>DJ Knom</div>
+              <div style={{
+                marginTop: 20,
+                width: '100%',
+                height: 500,
+                backgroundImage: `url(${nam})`,
+                backgroundSize: 'cover',
+              }}>
               </div>
             </div>
           </div>

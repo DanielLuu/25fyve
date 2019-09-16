@@ -15,7 +15,7 @@ app.get('/api/payments', (req, res) => {
   agent.get(url).then(payments => {
     res.send(payments.body)
   }).catch(() => {
-    res.send({ error: 'Technical difficulties while pulling payments.' })
+    res.send({ error: 'Technical difficulties getting payments...' })
   })
 })
 
