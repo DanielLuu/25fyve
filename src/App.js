@@ -111,7 +111,7 @@ class App extends React.Component {
       {
         amount: 400,
         icon: 'https://static.thenounproject.com/png/1092336-200.png',
-        title: 'Lytes Sound'
+        title: 'Lytes & Sound'
       },
 
       {
